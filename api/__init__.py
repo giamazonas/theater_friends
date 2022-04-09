@@ -25,6 +25,7 @@ def create_app(config):
 
   # ============ Register Blueprints ============
   app.register_blueprint(auth, url_prefix='/api/auth') 
+  # app.register_blueprint(shows, url_prefix='/api/shows')
 
   return app
 
