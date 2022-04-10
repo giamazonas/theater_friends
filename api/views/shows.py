@@ -10,6 +10,7 @@ shows = Blueprint('shows', 'shows')
 @login_required
 def create():
   data = request.get_json()
+  print(data)
   profile = read_token(request)
   data["profile_id"] = profile["id"]
   show = Show(**data)
@@ -20,6 +21,7 @@ def create():
 @shows.route('/', methods=["GET"])
 def index():
   shows = Show.query.all()
+  print(shows)
   return jsonify([show.serialize() for show in shows]), 200
 
 @shows.route('/<id>', methods=["GET"])
