@@ -49,7 +49,8 @@ shows page
 <br>
 <br>
 
-
+Trello Board/Planning: [Trello](https://trello.com/b/areQ48Dy/theaterfriends)
+<br>
 
 ### TECH USED 👯
 ________________

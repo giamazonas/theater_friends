@@ -29,7 +29,6 @@ def show(id):
   show = Show.query.filter_by(id=id).first()
   show_data = show.serialize()
   return jsonify(show=show_data), 200
-# this show in second line, 26, may be problematic 
 
 @shows.route('/<id>', methods=["PUT"]) 
 @login_required
@@ -59,6 +58,7 @@ def delete(id):
   db.session.delete(show)
   db.session.commit()
   return jsonify(message="Success"), 200
+
 
 @shows.errorhandler(Exception)          
 def basic_error(err):
