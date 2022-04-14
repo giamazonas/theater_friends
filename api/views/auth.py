@@ -39,7 +39,6 @@ def register():
   token = create_token(payload)
   return jsonify(payload=profile.serialize(),token=token), 200
 
-
 # http://127.0.0.1:5000/api/auth/login
 @auth.route('/login', methods=["POST"])
 def login():
